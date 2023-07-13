@@ -1,5 +1,3 @@
----
-
 ### 목표
 
 - Navigation의 개념 이해하기
@@ -8,28 +6,17 @@
 
 ### Navigation이란?
 
-React Natvie 앱에서 네비게이션이란? 
+React Natvie 앱에서 네비게이션이란?
 
-웹 브라우저에서는 URL 입력을 통해 하위 페이지로 이동하고는 한다. 모바일 앱은 좀 다른데, 버튼을 눌러서 한 화면에서 다른 화면으로 이동하거나 이전 화면으로 돌아가는 식이다. 
+웹 브라우저에서는 URL 입력을 통해 하위 페이지로 이동하고는 한다. 모바일 앱은 좀 다른데, 버튼을 눌러서 한 화면에서 다른 화면으로 이동하거나 이전 화면으로 돌아가는 식이다.
 
-React native안에 있는 내비게이션 패턴을 알아보도록 하자. 
-
----
+React native안에 있는 내비게이션 패턴을 알아보도록 하자.
 
 ## 음식 카테고리 만들기
 
 ### FlatList로 음식 카테고리 구현
 
 - 카테고리는 개수도 적고 정적 데이터여서 굳이 FlatList를 사용할 필요는 없지만 연습을 위해 사용하도록 한다.
-
-<aside>
-✂️ **이 실수로 인해 6분을 날렸다.**
-
-화살표 함수에서 props를 전달해줄 때 중괄호를 채워주는 것을 잊지 말자
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a506c5ae-995d-4745-91a4-7d0d769a91e7/Untitled.png)
-
-</aside>
 
 ### **Pressable**
 
@@ -44,10 +31,9 @@ React native안에 있는 내비게이션 패턴을 알아보도록 하자.
 - Pressable로 감싸졌을 때
   - `onPressIn` press가 활성화 되었을 때 호출된다.
   - `onPressOut` press가 비활성화 되었을 때 호출된다.
-  `onPressIn` 이 감지된 이후, 아래의 두가지 중 하나가 발생한다.
+    `onPressIn` 이 감지된 이후, 아래의 두가지 중 하나가 발생한다.
   1. 사용자가 손가락을 떼면 `onPressOut` → `onPress`
   2. 사용자가 손가락을 떼기 전에 0.5 초 이상 누르고 있으면 `onLongPress` → `onPressOut`
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ebeb5e55-dfef-425e-a2d5-9a24513f318c/Untitled.png)
 
 ---
 
@@ -90,9 +76,8 @@ android_ripple 프로퍼티를 사용하여 클릭 시 색을 지정하여 클�
   - `overflow: 'hidden'`
     <aside>
     ⚠️ 이 방법을 사용할 시 iOS에서 외부에 있는 그림자가 숨겨진다. 따라서 overflow: hidden은 안드로이드일 때에만 적용하고, iOS는 다른 스타일링을 추가해야 한다. 이를 위해 Platform API를 사용할 것이다.
-    
-    </aside>
 
+    </aside>
 
 ### Platform API
 
@@ -175,11 +160,10 @@ export default function App() {
   - 여기에 있는 navigation 프로퍼티의 값은 화면 사이를 이동하게 하는 메서드를 포함하는 객체가 된다.
     <aside>
     💡 App.js → CategoriesScreen을 네비게이션 스크린으로 정의함
-    
-    CategoriesScreen은 화면 사이를 이동하게 하는 메서드를 가지는 객체 프로퍼티를 받음
-    
-    </aside>
 
+    CategoriesScreen은 화면 사이를 이동하게 하는 메서드를 가지는 객체 프로퍼티를 받음
+
+    </aside>
 
 ### 기본 화면 설정하기
 
