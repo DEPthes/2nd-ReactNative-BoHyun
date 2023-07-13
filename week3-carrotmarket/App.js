@@ -13,6 +13,7 @@ import WriteButtonModal from "./components/WriteButtonModal";
 import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
+  
   return (
     <NavigationContainer>
       <Navi />
