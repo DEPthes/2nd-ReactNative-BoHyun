@@ -3,17 +3,17 @@ import CategoryGridTile from "../components/CategoryGridTile";
 import { CATEGORIES } from "../data/dummy-data";
 
 const CategoriesScreen = ({ navigation }) => {
-  const renderCategoryItem = (sigbal) => {
+  const renderCategoryItem = (categoryItem) => {
     const pressHandler = () => {
       navigation.navigate("MealsOverview", {
-        categoryId: sigbal.item.id,
+        categoryId: categoryItem.item.id,
       });
     };
 
     return (
       <CategoryGridTile
-        title={sigbal.item.title}
-        color={sigbal.item.color}
+        title={categoryItem.item.title}
+        color={categoryItem.item.color}
         onPress={pressHandler}
       />
     );
